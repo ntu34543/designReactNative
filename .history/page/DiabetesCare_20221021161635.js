@@ -38,34 +38,7 @@ export default function ScreenB({ navigation }) {
       price: 150,
     },
   ];
-
-  const AllProducts = [
-    {
-      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-      name: "Accu-check Active Test Strip",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 112,
-    },
-    {
-      id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-      name: "Omron HEM-8712 BP Monitor",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 150,
-    },
-    {
-      id: "58694a0f-3da1-471f-bd96-145571e29d72",
-      name: "Accu-check Active Test Strip",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 112,
-    },
-    {
-      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb27ba",
-      name: "Omron HEM-8712 BP Monitor",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 150,
-    },
-  ];
-  // topProduct
+  // topP
   const Item = ({ name, img }) => (
     <View style={styles.item}>
       <Image style={styles.imgTopProduct} source={img} />
@@ -73,15 +46,6 @@ export default function ScreenB({ navigation }) {
     </View>
   );
   const renderItem = ({ item }) => <Item name={item.name} img={item.img} />;
-  // all Products
-  const AllProduct = ({ name, img, price }) => (
-    <View style={styles.itemAllProduct}>
-      <Image style={styles.imgTopProduct} source={img} />
-      <Text style={styles.allNameTopProduct}>{name}</Text>
-      <Text style={styles.allPriceTopProduct}>${price}</Text>
-    </View>
-  );
-  const renderallProduct = ({ item }) => <AllProduct name={item.name} img={item.img} price={item.price} />;
 
   const onPressHandler = () => {
     navigation.navigate("Screen_A");
@@ -119,8 +83,8 @@ export default function ScreenB({ navigation }) {
         <SafeAreaView>
           <FlatList
             numColumns={2}
-            data={AllProducts}
-            renderItem={renderallProduct}
+            data={DATA}
+            renderItem={renderItem}
             keyExtractor={(item) => item.id}
           />
         </SafeAreaView>
@@ -133,8 +97,7 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: "white",
-    paddingLeft: 20,
-    paddingRight: 20,
+    padding: 20,
   },
   text: {
     fontSize: 30,
@@ -143,7 +106,8 @@ const styles = StyleSheet.create({
   banner: {
     justifyContent: "center",
     alignItems: "center",
-    flex: 1.5,
+    // marginTop: 100,
+    flex: 1,
   },
   imgHeader: {
     position: "absolute",
@@ -168,12 +132,13 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   topPro: {
-    flex: 2,
+    flex: 1,
   },
   title3: {
     position: "relative",
     fontSize: 16,
     fontWeight: "bold",
+    marginTop: 10,
   },
   item: {
     marginVertical: 20,
@@ -189,26 +154,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   product: {
-    flex: 3,
+    flex: 1,
   },
-  itemAllProduct: {
-    marginVertical: 10,
-    marginHorizontal: 10,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: '#f2f4f6',
-    borderRadius: 15,
-  },
-  allNameTopProduct:{
-    width: 120,
-    height: 70,
-    padding: 10,
-    fontSize: 13,
-  },
-  allPriceTopProduct: {
-    paddingLeft: 10,
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
-  }
 });

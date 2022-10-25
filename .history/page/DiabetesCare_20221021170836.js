@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   },
   allPriceTopProduct: {
     paddingLeft: 10,
-    paddingBottom: 10,
+    paddingTop: 10,
     fontWeight: 'bold',
     fontSize: 16,
   }

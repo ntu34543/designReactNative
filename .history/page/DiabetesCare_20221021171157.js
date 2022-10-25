@@ -117,7 +117,7 @@ export default function ScreenB({ navigation }) {
       <View style={styles.product}>
         <Text style={styles.title3}>All Products</Text>
         <SafeAreaView>
-          <FlatList
+          <FlatList style={{ overflow:'hidden' }}
             numColumns={2}
             data={AllProducts}
             renderItem={renderallProduct}

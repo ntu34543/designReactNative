@@ -190,6 +190,7 @@ const styles = StyleSheet.create({
   },
   product: {
     flex: 3,
+    overflow:'hidden'
   },
   itemAllProduct: {
     marginVertical: 10,

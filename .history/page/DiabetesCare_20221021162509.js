@@ -38,33 +38,6 @@ export default function ScreenB({ navigation }) {
       price: 150,
     },
   ];
-
-  const AllProducts = [
-    {
-      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-      name: "Accu-check Active Test Strip",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 112,
-    },
-    {
-      id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-      name: "Omron HEM-8712 BP Monitor",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 150,
-    },
-    {
-      id: "58694a0f-3da1-471f-bd96-145571e29d72",
-      name: "Accu-check Active Test Strip",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 112,
-    },
-    {
-      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb27ba",
-      name: "Omron HEM-8712 BP Monitor",
-      img: require("../assets/img/AccucheckActiveTestStrip.png"),
-      price: 150,
-    },
-  ];
   // topProduct
   const Item = ({ name, img }) => (
     <View style={styles.item}>
@@ -77,8 +50,8 @@ export default function ScreenB({ navigation }) {
   const AllProduct = ({ name, img, price }) => (
     <View style={styles.itemAllProduct}>
       <Image style={styles.imgTopProduct} source={img} />
-      <Text style={styles.allNameTopProduct}>{name}</Text>
-      <Text style={styles.allPriceTopProduct}>${price}</Text>
+      <Text style={styles.nameTopProduct}>{name}</Text>
+      <Text style={styles.priceTopProduct}>{price}</Text>
     </View>
   );
   const renderallProduct = ({ item }) => <AllProduct name={item.name} img={item.img} price={item.price} />;
@@ -119,7 +92,7 @@ export default function ScreenB({ navigation }) {
         <SafeAreaView>
           <FlatList
             numColumns={2}
-            data={AllProducts}
+            data={DATA}
             renderItem={renderallProduct}
             keyExtractor={(item) => item.id}
           />
@@ -192,23 +165,7 @@ const styles = StyleSheet.create({
     flex: 3,
   },
   itemAllProduct: {
-    marginVertical: 10,
+    marginVertical: 20,
     marginHorizontal: 10,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: '#f2f4f6',
-    borderRadius: 15,
-  },
-  allNameTopProduct:{
-    width: 120,
-    height: 70,
-    padding: 10,
-    fontSize: 13,
-  },
-  allPriceTopProduct: {
-    paddingLeft: 10,
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
   }
 });

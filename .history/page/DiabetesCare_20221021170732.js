@@ -200,14 +200,12 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   allNameTopProduct:{
-    width: 120,
-    height: 70,
+    // width: 120,
     padding: 10,
     fontSize: 13,
   },
   allPriceTopProduct: {
     paddingLeft: 10,
-    paddingBottom: 10,
     fontWeight: 'bold',
     fontSize: 16,
   }

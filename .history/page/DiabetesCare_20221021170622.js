@@ -78,7 +78,7 @@ export default function ScreenB({ navigation }) {
     <View style={styles.itemAllProduct}>
       <Image style={styles.imgTopProduct} source={img} />
       <Text style={styles.allNameTopProduct}>{name}</Text>
-      <Text style={styles.allPriceTopProduct}>${price}</Text>
+      <Text style={styles.allPriceTopProduct}>{price}</Text>
     </View>
   );
   const renderallProduct = ({ item }) => <AllProduct name={item.name} img={item.img} price={item.price} />;
@@ -201,14 +201,12 @@ const styles = StyleSheet.create({
   },
   allNameTopProduct:{
     width: 120,
-    height: 70,
     padding: 10,
     fontSize: 13,
   },
   allPriceTopProduct: {
     paddingLeft: 10,
-    paddingBottom: 10,
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 13,
   }
 });

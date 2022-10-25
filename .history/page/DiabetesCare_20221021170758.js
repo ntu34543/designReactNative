@@ -201,13 +201,12 @@ const styles = StyleSheet.create({
   },
   allNameTopProduct:{
     width: 120,
-    height: 70,
+    height: 120,
     padding: 10,
     fontSize: 13,
   },
   allPriceTopProduct: {
     paddingLeft: 10,
-    paddingBottom: 10,
     fontWeight: 'bold',
     fontSize: 16,
   }

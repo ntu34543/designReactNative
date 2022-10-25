@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
     width: 100,
     textAlign: "center",
     padding: 10,
+    backgroundColor: "grey",
   },
   product: {
     flex: 3,

@@ -60,7 +60,7 @@ export default function ScreenB({ navigation }) {
     },
     {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb27ba",
-      name: "Omron HEM-8712 BP Monitor",
+      name: "Sugar Substitute",
       img: require("../assets/img/AccucheckActiveTestStrip.png"),
       price: 150,
     },
@@ -78,7 +78,7 @@ export default function ScreenB({ navigation }) {
     <View style={styles.itemAllProduct}>
       <Image style={styles.imgTopProduct} source={img} />
       <Text style={styles.allNameTopProduct}>{name}</Text>
-      <Text style={styles.allPriceTopProduct}>${price}</Text>
+      <Text style={styles.priceTopProduct}>{price}</Text>
     </View>
   );
   const renderallProduct = ({ item }) => <AllProduct name={item.name} img={item.img} price={item.price} />;
@@ -200,15 +200,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   allNameTopProduct:{
-    width: 120,
-    height: 70,
+    width: 100,
     padding: 10,
-    fontSize: 13,
-  },
-  allPriceTopProduct: {
-    paddingLeft: 10,
-    paddingBottom: 10,
-    fontWeight: 'bold',
-    fontSize: 16,
   }
 });
