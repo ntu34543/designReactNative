@@ -5,7 +5,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import ScreenA from "./page/Home";
 import ScreenB from "./page/DiabetesCare";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+// const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const Tab = createStackNavigator();
 export default function App() {
