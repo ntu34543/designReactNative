@@ -4,12 +4,15 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import ScreenA from "./page/Home";
 import ScreenB from "./page/DiabetesCare";
+import Profile from "./page/Profile";
+import Notify from "./page/Notify";
+import Cart from "./page/Cart";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-// const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-const Tab = createStackNavigator();
+// const Tab = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
@@ -19,11 +22,23 @@ export default function App() {
           tabBarIcon: ({ focused, size, color }) => {
             let iconName;
             if (route.name === "Screen_A") {
-              iconName = "autoprefixer";
+              iconName = "home";
               size = focused ? 25 : 20;
               // color = focused ? "#f0f" : "#555";
             } else if (route.name === "Screen_B") {
-              iconName = "btc";
+              iconName = "plus-square";
+              size = focused ? 25 : 20;
+              // color = focused ? "#f0f" : "#555";
+            } else if (route.name === "Profile") {
+              iconName = "user";
+              size = focused ? 25 : 20;
+              // color = focused ? "#f0f" : "#555";
+            } else if (route.name === "Notify") {
+              iconName = "bell";
+              size = focused ? 25 : 20;
+              // color = focused ? "#f0f" : "#555";
+            } else if (route.name === "Cart") {
+              iconName = "cart-plus";
               size = focused ? 25 : 20;
               // color = focused ? "#f0f" : "#555";
             }
@@ -31,9 +46,10 @@ export default function App() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: "#f0f",
+          activeTintColor: "white",
+          activeBackgroundColor: "#4157ff",
           inactiveTintColor: "#555",
-          inactiveBackgroundColor: "#999",
+          inactiveBackgroundColor: "white",
           showLabel: true,
           labelStyle: { fontSize: 14 },
         }}
@@ -41,10 +57,13 @@ export default function App() {
         <Tab.Screen 
           name="Screen_A"
           component={ScreenA}
-          options={{ tabBarBadge: 3 }}
+          // options={{ tabBarBadge: 3 }}
         />
         {/* options={{header: () => null}} */}
+        <Tab.Screen name="Notify" options={{ tabBarBadge: 8 }} component={Notify} />
         <Tab.Screen name="Screen_B" component={ScreenB} />
+        <Tab.Screen name="Cart" component={Cart} />
+        <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );

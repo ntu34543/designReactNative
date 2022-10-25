@@ -10,20 +10,15 @@ import {
   FlatList,
   SafeAreaView,
 } from "react-native";
-import Banner from "../components/Banner";
-import TopProduct from "../components/TopProduct";
-import Product from "../components/Product";
 
-export default function DiabetesCare({ navigation }) {
+export default function Cart({ navigation }) {
   const onPressHandler = () => {
     navigation.navigate("Screen_A");
     // navigation.goBack();
   };
   return (
     <View style={styles.body}>
-      <Banner />
-      <TopProduct />
-      <Product />
+        
     </View>
   );
 }
