@@ -18,7 +18,7 @@ export default function TopProduct() {
   const [loading, setLoading] = useState(false);
   const getPosts = async () => {
     setLoading(true);
-    await axios(DATA)
+    await fetch(DATA)
       .then((res) => res.json())
       .then((res) => {
         setData(res);
@@ -99,8 +99,6 @@ const styles = StyleSheet.create({
   imgTopProduct: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-    width: 100,
-    height: 100,
   },
   nameTopProduct: {
     width: 100,

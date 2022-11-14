@@ -99,8 +99,6 @@ const styles = StyleSheet.create({
   imgTopProduct: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-    width: 100,
-    height: 100,
   },
   nameTopProduct: {
     width: 100,

@@ -1,4 +1,5 @@
 import React from "react";
+import a
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -10,7 +11,6 @@ import {
   FlatList,
   SafeAreaView,
 } from "react-native";
-import axios from "axios";
 
 export default function TopProduct() {
   const DATA = "https://636df979b567eed48acecbb5.mockapi.io/drugs";
@@ -69,7 +69,7 @@ export default function TopProduct() {
     <View style={styles.topPro}>
       <Text style={styles.title3}>Diabetic Diet</Text>
       <SafeAreaView>
-        <FlatList 
+        <FlatList
           data={data}
           keyExtractor={(item, index) => item.id + index.toString()}
           refreshing={loading}
@@ -99,8 +99,6 @@ const styles = StyleSheet.create({
   imgTopProduct: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-    width: 100,
-    height: 100,
   },
   nameTopProduct: {
     width: 100,
